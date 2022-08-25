@@ -7,6 +7,15 @@ module.exports = {
   entry: {
     application: "./app/javascript/application.js"
   },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      }
+    ]
+  },
   output: {
     filename: "[name].js",
     sourceMapFilename: "[file].map",
